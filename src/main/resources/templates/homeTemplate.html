@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+[[${xxx}]] this is home
+
+<form th:action="@{/saveDocument}" method="post" th:object="${document}" enctype="multipart/form-data">
+    <input th:field="*{name}" placeholder="name">
+    <br>
+    <input type="date" th:field="*{date}">
+    <br>
+    <input type="text" th:field="*{type}"  value="TYPE_PASSPORT" >
+    <br>
+    <input  type= "file" th:field="*{multipartFile}">
+    <br>
+    <input type="submit" value="go!">
+</form>
+
+
+</body>
+</html>
