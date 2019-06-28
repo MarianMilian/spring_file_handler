@@ -27,7 +27,7 @@ public class Document {
     private LocalDate date;
     @Enumerated(EnumType.STRING)
     private Type type = Type.TYPE_PASSPORT;
-    private int size;
+    private long size;
     //@Transient не записує  в бд
 
 }
